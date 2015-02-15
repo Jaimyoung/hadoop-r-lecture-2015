@@ -1,0 +1,13 @@
+[
+    {
+        "Name": "JSON Streaming Step",
+        "Type": "STREAMING",
+        "ActionOnFailure": "CONTINUE",
+        "Args": [
+            "-files", "s3://snu-sri-2015/src/wc_mapper.py,s3://snu-sri-2015/src/wc_reducer.py",
+            "-mapper", "wc_mapper.py",
+            "-reducer", "wc_reducer.py",
+            "-input", "s3://snu-sri-2015/data/gutenberg/pg10.txt",
+            "-output", "s3://snu-sri-2015/tmp/user01/kjv-wc"]
+    }
+]
